@@ -4,9 +4,22 @@
 html{
     background: darkblue;
     font-family: fantasy;
+    letter-spacing: 1px;
 }
 body{
     margin: 0;
+}
+.navbar nav{
+    text-align: center;
+    padding: 20px;
+    margin: 0px 350px 0px 350px;
+    border: double 5px;
+}
+.navbar nav a{
+    text-decoration: none;
+    color: var(--main-text-color);
+    font-size: 22px;
+    margin: 20px;
 }
 .title{
     text-align: center;
@@ -14,6 +27,10 @@ body{
     color: gold;
     text-decoration: underline double orange;
     padding: 20px;
+}
+.subtitle{
+    color: gold;
+    text-decoration: underline double orange;
 }
 .container-main{
     display: flex;
@@ -44,4 +61,57 @@ body{
 .footer a{
     text-decoration: none;
     color: var(--main-text-color);
+}
+.jobs{
+    color: var(--main-text-color);
+    text-shadow: 2px 2px black;
+    margin: 40px;
+    padding: 10px;
+    border: dashed 4px orange;
+}
+.skills{
+    color: var(--main-text-color);
+    text-shadow: 2px 2px black;
+    margin: 40px;
+    padding: 10px;
+    border: dashed 4px darkcyan;
+}
+.job-title{
+    text-decoration: underline 2px black;
+}
+.company-name{
+    font-style: italic;
+}
+.year-worked{
+    font-size: 16px;
+    opacity: 70%;
+}
+#ahc-career-center, #sbceo-ece,#cardenas-bros{
+    padding: 0px 20px 0px 20px;
+    margin: 15px;
+    border: dotted 2px white;
+}
+#work-experiences-jobs-subtitle{
+    padding: 0px 0px 10px 10px;
+}
+.proficiency{
+    margin-left: 10px;
+    font-style: italic;
+    color: #555;
+}
+.expert{
+    color: forestgreen;
+}
+.intermediate{
+    color: yellowgreen;
+}
+.beginner{
+    color: yellow;
+}
+.novice{
+    color:red;
+}
+.skills p {
+    padding-left: 20px;
+    opacity: 60%;
 }
