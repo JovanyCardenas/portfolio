@@ -1,0 +1,47 @@
+:root{
+    --main-text-color:navajowhite;
+}
+html{
+    background: darkblue;
+    font-family: fantasy;
+}
+body{
+    margin: 0;
+}
+.title{
+    text-align: center;
+    font-size: 50px;
+    color: gold;
+    text-decoration: underline double orange;
+    padding: 20px;
+}
+.container-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    max-width: 1200px;
+}
+.main-text{
+    background: #000066;
+    border: orange dashed 5px;
+    margin: 50px 20px 50px 100px;
+    text-align: center;
+    font-size: 18px;
+    color: var(--main-text-color);
+    text-shadow: darkblue 2px 2px;
+}
+.personal-image img{
+    max-width: 200%;
+    height: auto;
+    display: block;
+}
+.footer{
+    color: var(--main-text-color);
+    background: #000066;
+    padding: 20px;
+}
+.footer a{
+    text-decoration: none;
+    color: var(--main-text-color);
+}
