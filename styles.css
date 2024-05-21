@@ -3,23 +3,29 @@
 }
 html{
     background: darkblue;
-    font-family: fantasy;
+    font-family: Times New Roman;
     letter-spacing: 1px;
 }
 body{
     margin: 0;
 }
-.navbar nav{
-    text-align: center;
+.navbar{
+    display: flex;
+    justify-content: center;
     padding: 20px;
-    margin: 0px 350px 0px 350px;
+}
+.navbar nav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
     border: double 5px;
+    padding: 20px;
 }
 .navbar nav a{
     text-decoration: none;
     color: var(--main-text-color);
     font-size: 22px;
-    margin: 20px;
 }
 .title{
     text-align: center;
@@ -114,4 +120,28 @@ body{
 .skills p {
     padding-left: 20px;
     opacity: 60%;
+}
+pre {
+    background-color: #2e3440;
+    padding: 20px;
+    border-radius: 5px;
+    overflow-x: auto;
+    white-space: pre-wrap; /* To wrap long lines */
+    font-size: 16px;
+}
+code {
+    color: #d8dee9;
+    font-family: 'Courier New', Courier, monospace;
+}
+.language-java .keyword { color: #81a1c1; }
+.language-java .string { color: #a3be8c; }
+.language-java .comment { color: #616e88; font-style: italic; }
+.language-java .class-name { color: #8fbcbb; font-weight: bold; }
+.button{
+    padding: 5px;
+    margin: 30px;
+}
+.container{
+    padding: 20px;
+    color: var(--main-text-color);
 }
