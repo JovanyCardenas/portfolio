@@ -2,57 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio Site</title>
-    <link rel="stylesheet" href="styles.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="files/styles.css" type="text/css" rel="stylesheet">
+    <title>Jovany Cardenas Vargas</title>
 </head>
 <body>
-<div class="title">Jovany's Portfolio Site</div>
-<div class="navbar">
-    <nav>
-        <a href="index.html">Homepage</a> | <a href="work-experiences.html">Work Experiences</a> | <a href="coding-projects.html">Projects</a> | <a href="index.html">Other</a>
-    </nav>
-</div>
-<div class="container-main">
-    <div class="main-text">
-        <div class="whoami">
-            <p>I come from a family of 2 younger brothers and 2 older half brothers. My parents come from Mexico and they
-            both work in the Strawberry fields. I was born and raised in Santa Maria, CA and I got interested in Computer Science
-            in high school, I started with a Web Design class which got me interested in coding.</p>
+<header>
+    <h1>Jovany Cardenas Vargas</h1>
+    <p>Student at Allan Hancock College</p>
+</header>
+<nav>
+    <a href="#about">About Me</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+<div class="container">
+    <img class="profile-img" src="https://jovanycardenas.github.io/my-portfolio-site/images/IMG_9358.jpeg" alt="Jovany Cardenas Vargas">
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hello! My name is Jovany Cardenas Vargas. I come from a family of two younger brothers and two older half-brothers. My parents are from Mexico and work in the strawberry fields. I was born and raised in Santa Maria, CA, and developed an interest in Computer Science during high school, starting with a Web Design class that sparked my passion for coding.</p>
+        <p>I graduated from Pioneer Valley High School in 2022 with a 3.6 GPA and continued my education at Allan Hancock College, where I am pursuing an Associate's in Science for Computer Science. My coursework includes CS111, CS112, CS131, and I am currently taking CS161. I plan to transfer to a four-year university like CalPoly SLO to further my education.</p>
+        <p>Outside of my academic pursuits, I am involved in various extracurricular activities, including SkillsUSA, the Computer Science Club, the Science and Engineering Club, and support programs like EOPS, CAN-TRIO, and MESA. I have achieved significant success in SkillsUSA, winning gold at the state level for two years and silver at the national level. I am competing again this year and have already won gold at the state level.</p>
+        <p>In addition to being a full-time student, I work at the Career Center at Allan Hancock College as a student worker, assisting students with job searches, resume creation, typing tests, and meeting with career counselors. I also help organize events like Career Expo and Career Carnival, and support various programs within the Career Center, including SkillsUSA and College Corps.</p>
+    </section>
+    <section id="portfolio" class="section">
+        <h2>Portfolio</h2>
+        <p>Here are some of the projects and assignments I've completed during my studies. (This section can be expanded with links and descriptions of specific projects, photos, or any other relevant work.)</p>
+    </section>
+    <section id="projects" class="section">
+        <h2>Coding Projects</h2>
+        <p>Below are some of the coding projects I've worked on for SkillsUSA:</p>
+        <ul>
+            <li><strong>Encryption Program</strong> (2022-23 Regionals): Created a program that encrypted numbers into other numbers and decrypted them back.</li>
+            <li><strong>Depreciation Value Calculator</strong> (2022-23 State): Developed a GUI-based calculator to determine the depreciation value of an item.</li>
+            <li><strong>Future Value Calculator</strong> (2022-23 State): Built a GUI-based program to calculate the future value of an item using an interest rate over a specified number of years.</li>
+            <li><strong>Anagram Program</strong> (2022-23 Nationals): Created a GUI-based program that generated anagrams from a given name.</li>
+            <li><strong>15x15 Grid Game</strong> (2022-23 Nationals): Developed a GUI-based game similar to Minesweeper, featuring a 15x15 grid with hidden bombs and a health system to avoid the bombs.</li>
+            <li><strong>Escape Velocity Calculator</strong> (2023-24 Regionals): Created a program to calculate the velocity needed to escape Earth's orbit using the radius and altitude.</li>
+            <li><strong>Log File Creator</strong> (2023-24 Regionals): Developed a program to save provided information as a log file.</li>
+            <li><strong>Crafting Inventory System</strong> (2023-24 Regionals): Built a crafting inventory system where recipes can be made from available items.</li>
+            <li><strong>Range Interpreter</strong> (2023-24 State): Built a function to interpret a string of comma and/or hyphen-separated range descriptions into an ordered array of integers, handling various edge cases and invalid data.</li>
+            <li><strong>File Search Tool</strong> (2023-24 State): Created a program to search for filenames within a directory structure based on user input, including features for constrained search depth, infinite loop prevention, and a user-friendly interface for viewing file contents.</li>
+        </ul>
+    </section>
+    <section id="skills" class="section">
+        <h2>Programming Languages</h2>
+        <div class="skills">
+            <h3>Java</h3>
+            <ul>
+                <li class="advanced">Advanced</li>
+                <li>Experienced in creating different types of programs for different purposes.</li>
+            </ul>
+            <h3>Python</h3>
+            <ul>
+                <li class="intermediate">Intermediate</li>
+                <li>Experienced in creating different types of programs but need more practice.</li>
+            </ul>
+            <h3>HTML</h3>
+            <ul>
+                <li class="intermediate">Intermediate</li>
+                <li>Knowledge of near expert level but could still learn more.</li>
+            </ul>
+            <h3>CSS</h3>
+            <ul>
+                <li class="intermediate">Intermediate</li>
+                <li>Knowledge of most uses but still need practice to improve the use of it.</li>
+            </ul>
+            <h3>JavaScript</h3>
+            <ul>
+                <li class="intermediate">Intermediate</li>
+                <li>Knowledge of most basic uses but still need more practice and experience.</li>
+            </ul>
+            <h3>C++</h3>
+            <ul>
+                <li class="beginner">Beginner</li>
+                <li>Knowledge of basic programming terms but still need more practice on it.</li>
+            </ul>
         </div>
-        <div class="student-life">
-            <p>I graduated from Pioneer Valley High School in 2022 with a 3.6 GPA and went to Allan Hancock College to continue
-            my education. At Allan Hancock College, I decided to study Computer Science and I have been completing my coursework
-            like my general education and major specific coursework, for my major I have done the CS111, CS112, CS131 and I am taking CS161.
-            I am also planning to transfer to a 4-year university like CalPoly SLO or another good school where I can learn and improve myself further.
-            </p>
-        </div>
-        <div class="extracurricular-activities">
-            <p>Outside of school, I also am a part of SkillsUSA, the Computer Science Club, Science and Engineering Club, and other support programs
-            like EOPS, CAN-TRIO, & MESA. SkillsUSA is a program that I participated to compete in Computer Programming which I competed for 2022-23 and
-            won Gold at State Competitions, as well as winning Silver at Nationals, I was also the Secretary for SkillsUSA. I am also competing in SkillsUSA
-            for 2023-24 year and I have won Gold at State again and am going to compete in National Competitions. I signed up to this program to challenge myself
-            and to keep myself learning and improving. as well as to keep coding and practicing.</p>
-        </div>
-        <div class="work-life">
-            <p>Other than being a full-time student, I also work at the Career Center at Allan Hancock College, I am a student worker and I help students seek jobs,
-            create resumes, take typing tests, meet with career counselors, helping with different events that we host such as Career Expo or Career Carnival, and much
-            more. I also help programs that run within the Career Center such as SkillsUSA, College Corps, and help with other tasks from other programs that may need some
-            help. I am currently working with the College Corps team and helping the staff with doing many different tasks like making phone calls to all our fellows, sending
-            out emails to instructors to spread information on what is College Corps, assisting with events and event preparation, and many more tasks that would be needed.</p>
-        </div>
-    </div>
-    <div class="personal-image">
-        <img src="images/IMG_9358.jpeg" alt="Personal Image">
-    </div>
-</div>
-<br><br>
-<div class="footer">
-    <footer>
-    <div class="contact-info">
-        <p>You can contact me by emailing me at <a href="mailto:16jovany2004@gmail.com">16jovany2004@gmail.com</a>.</p>
-        <p><a href="http://instagram.com/jovany.cardenas.75" target="_blank">Instagram: @jovany.cardenas.75</a></p>
-    </div>
-    </footer>
-</div>
+    </section>
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>You can reach me via email at <a href="mailto:16jovany2004@gmail.com">16jovany2004@gmail.com</a></p>
+        Instagram: <a href="http://instagram.com/jovany.cardenas.75" target="_blank">@jovany.cardenas.75</a>
+    </section>
+</div><br><br>
+<footer>
+    <p>&copy; 2024 Jovany Cardenas Vargas</p>
+</footer>
 </body>
 </html>

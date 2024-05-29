@@ -1,0 +1,86 @@
+html{
+    font-family: Times New Roman;
+    letter-spacing: 1px;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+}
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+nav a:hover {
+    background-color: #575757;
+}
+.container {
+    padding: 20px;
+}
+.section {
+    margin-bottom: 40px;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+.skills {
+    margin-bottom: 20px;
+}
+.skills h3 {
+    margin-bottom: 10px;
+}
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+.skills li {
+    margin-bottom: 10px;
+}
+.profile-img {
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 200px;
+}
+.advanced {
+    color: forestgreen;
+    text-shadow:2px 2px 2px black;
+    font-weight:bold;
+}
+.intermediate {
+    color: yellowgreen;
+    text-shadow:2px 2px 2px black;
+    font-weight:bold;
+}
+.beginner {
+    color: yellow;
+    text-shadow:2px 2px 2px black;
+    font-weight:bold;
+}
+.below-beginner {
+    color: red;
+    text-shadow:2px 2px 2px black;
+    font-weight:bold;
+}
