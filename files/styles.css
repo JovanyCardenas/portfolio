@@ -100,3 +100,6 @@ footer {
     text-shadow:2px 2px 2px black;
     font-weight:bold;
 }
+.work-icon img{
+    height: 90px;
+}
