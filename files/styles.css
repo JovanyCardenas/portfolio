@@ -60,17 +60,17 @@ footer {
     width: 100%;
     bottom: 0;
 }
-.skills {
+.programming-language-skills {
     margin-bottom: 20px;
 }
-.skills h3 {
+.programming-language-skills h3 {
     margin-bottom: 10px;
 }
-.skills ul {
+.programming-language-skills ul {
     list-style-type: none;
     padding: 0;
 }
-.skills li {
+.programming-language-skills li {
     margin-bottom: 10px;
 }
 .profile-img {
