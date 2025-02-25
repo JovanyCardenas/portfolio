@@ -4,6 +4,7 @@
     }
     nav a {
         padding: 10px 20px;
+        transition: background-color 0.3s ease, color 0.3s ease;
     }
     .container {
         padding: 10px;
@@ -14,8 +15,9 @@
 }
 
 html{
-    font-family: Times New Roman;
+    font-family: Arial, sans-serif;
     letter-spacing: 1px;
+    scroll-behavior: smooth;
 }
 body {
     font-size: 16px;
@@ -37,8 +39,9 @@ nav {
     background-color: #333;
 }
 nav a {
+    width: 100%;
     color: white;
-    padding: 14px 20px;
+    padding: 12px 0;
     text-decoration: none;
     text-align: center;
 }
@@ -56,7 +59,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: fixed;
+    position: relative;
     width: 100%;
     bottom: 0;
 }
@@ -77,7 +80,7 @@ footer {
     display: block;
     margin: 0 auto;
     border-radius: 50%;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
     max-width: 200px;
 }
 .advanced {
@@ -91,7 +94,7 @@ footer {
     font-weight:bold;
 }
 .beginner {
-    color: yellow;
+    color: #FFAA00;
     text-shadow:2px 2px 2px black;
     font-weight:bold;
 }
@@ -111,7 +114,7 @@ footer {
 .tooltip .tooltip-text {
     visibility: hidden;
     width: 350px;
-    background: #555;
+    background: #222;
     color: #fff;
     text-align: center;
     border-radius: 5px;
@@ -127,4 +130,41 @@ footer {
 .tooltip:hover .tooltip-text {
     visibility: visible;
     opacity: 1;
+}
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .hamburger-menu{
+        display: block;
+    }
+    nav {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 1000;
+    }
+    nav a {
+        display: block;
+        padding: 15px;
+        text-align: center;
+        border-top: 1px solid #575757;
+    }
+    nav.show{
+        display: flex;
+    }
 }

@@ -42,3 +42,7 @@ function ageCalculator(){
     document.getElementById("age").innerHTML = age;
     // Age calculation part complete
 }
+function toggleMenu(){
+    const navbar = document.getElementById("navbar");
+    navbar.classList.toggle('show');
+}
