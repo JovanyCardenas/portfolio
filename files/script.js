@@ -3,9 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('feedback-form').addEventListener('submit', function(e) {
         e.preventDefault();
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const feedback = document.getElementById("feedback").value;
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const feedback = document.getElementById("feedback").value.trim();
+
+        if (!name || !email || !feedback) {
+            alert("Please fill in all fields before submitting.");
+            return;
+        }
 
         const templateParams = {
             name: name,
@@ -15,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         //send email using EmailJS
 
-        emailjs.send('service_s4sl0ld', 'template_2gm3mzj', templateParams)
+        emailjs.send('service_s4sl0ld', 'template_2gm3mzj', templateParams, '9Fztvhq1AWSyd0EeG')
             .then(function (response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Thank you for your feedback!');
