@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Hello, World!');
 
-    document.getElementById('feedback-form').addEventListener('submit', function(e) {
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
         e.preventDefault();
         const name = document.getElementById("name").value.trim();
         const email = document.getElementById("email").value.trim();
-        const feedback = document.getElementById("feedback").value.trim();
+        const message = document.getElementById("message").value.trim();
 
-        if (!name || !email || !feedback) {
+        if (!name || !email || !message) {
             alert("Please fill in all fields before submitting.");
             return;
         }
@@ -15,18 +15,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const templateParams = {
             name: name,
             email: email,
-            feedback: feedback
+            message: message
         };
 
         //send email using EmailJS
 
-        emailjs.send('service_s4sl0ld', 'template_2gm3mzj', templateParams, '9Fztvhq1AWSyd0EeG')
+        emailjs.send('service_8y31cbc', 'template_2gm3mzj', templateParams, '9Fztvhq1AWSyd0EeG')
             .then(function (response) {
-                console.log('SUCCESS!', response.status, response.text);
-                alert('Thank you for your feedback!');
+                console.log('MESSAGE SUCCESS!', response.status, response.text);
+                alert('Thank you for your message!');
             }, function (error) {
-                console.log('FAILED...', error);
+                console.log('MESSAGE FAILED...', error);
                 alert('Oops! Something went wrong.');
+            });
+
+        emailjs.send('service_8y31cbc', 'template_rpd3b4a', templateParams, '9Fztvhq1AWSyd0EeG')
+            .then(function (response) {
+                console.log('REPLY SUCCESS!', response.status, response.text);
+            }, function (error) {
+                console.log('REPLY FAILED...', error);
             });
     });
 });
