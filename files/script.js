@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
     console.log('Hello, World!');
 
+    // Call startUp on load
+    startUp();
+
     document.getElementById('contact-form').addEventListener('submit', function(e) {
         e.preventDefault();
         const name = document.getElementById("name").value.trim();
@@ -38,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 function startUp(){ //function is called when the website loads up or refreshes
-    ageCalculator()
+    ageCalculator();
 }
 function ageCalculator(){
     //Calculates my age, so it is always current
