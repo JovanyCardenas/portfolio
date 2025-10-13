@@ -42,7 +42,7 @@ function startUp(){ //function is called when the website loads up or refreshes
 }
 function ageCalculator(){
     //Calculates my age, so it is always current
-    const birthday = "2004-10-04"
+    const birthday = "2004-9-04"
     const birthDate = new Date(birthday);
     const currentDate = new Date();
 
@@ -51,7 +51,10 @@ function ageCalculator(){
     if (monthDiff < 0 || (monthDiff === 0 && currentDate.getDate() < birthDate.getDate())) {
         age--;
     }
-    document.getElementById("age").innerHTML = age;
+    // document.getElementById("age").innerHTML = age;
+    const ageEl = document.getElementById('age');
+    if (ageEl) ageEl.textContext = age;
+    console.log(age);
     // Age calculation part complete
 }
 function toggleMenu(){
