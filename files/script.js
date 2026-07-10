@@ -1,66 +1,82 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Hello, World!');
+"use strict";
 
-    // Call startUp on load
-    startUp();
+document.addEventListener("DOMContentLoaded", () => {
+    const yearElement = document.getElementById("current-year");
+    const menuButton = document.getElementById("menu-button");
+    const navigation = document.getElementById("site-navigation");
 
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
+    // Automatically update the copyright year
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear().toString();
+    }
 
-        if (!name || !email || !message) {
-            alert("Please fill in all fields before submitting.");
-            return;
+    // Stop here if the mobile navigation elements are not present
+    if (!menuButton || !navigation) {
+        return;
+    }
+
+    const closeMenu = () => {
+        navigation.classList.remove("is-open");
+        document.body.classList.remove("menu-open");
+
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "Open navigation menu");
+        menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    };
+
+    const openMenu = () => {
+        navigation.classList.add("is-open");
+        document.body.classList.add("menu-open");
+
+        menuButton.setAttribute("aria-expanded", "true");
+        menuButton.setAttribute("aria-label", "Close navigation menu");
+        menuButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+    };
+
+    menuButton.addEventListener("click", () => {
+        const isOpen = navigation.classList.contains("is-open");
+
+        if (isOpen) {
+            closeMenu();
+        } else {
+            openMenu();
         }
+    });
 
-        const templateParams = {
-            name: name,
-            email: email,
-            message: message
-        };
+    // Close the mobile menu after selecting a navigation link
+    navigation.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+    });
 
-        //send email using EmailJS
+    // Close the menu when clicking outside it
+    document.addEventListener("click", (event) => {
+        const clickedInsideNavigation = navigation.contains(event.target);
+        const clickedMenuButton = menuButton.contains(event.target);
 
-        emailjs.send('service_8y31cbc', 'template_2gm3mzj', templateParams, '9Fztvhq1AWSyd0EeG')
-            .then(function (response) {
-                console.log('MESSAGE SUCCESS!', response.status, response.text);
-                alert('Thank you for your message!');
-            }, function (error) {
-                console.log('MESSAGE FAILED...', error);
-                alert('Oops! Something went wrong.');
-            });
+        if (
+            navigation.classList.contains("is-open") &&
+            !clickedInsideNavigation &&
+            !clickedMenuButton
+        ) {
+            closeMenu();
+        }
+    });
 
-        emailjs.send('service_8y31cbc', 'template_rpd3b4a', templateParams, '9Fztvhq1AWSyd0EeG')
-            .then(function (response) {
-                console.log('REPLY SUCCESS!', response.status, response.text);
-            }, function (error) {
-                console.log('REPLY FAILED...', error);
-            });
+    // Close the menu with the Escape key
+    document.addEventListener("keydown", (event) => {
+        if (
+            event.key === "Escape" &&
+            navigation.classList.contains("is-open")
+        ) {
+            closeMenu();
+            menuButton.focus();
+        }
+    });
+
+    // Reset the mobile menu when returning to desktop size
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 800) {
+            closeMenu();
+        }
     });
 });
-function startUp(){ //function is called when the website loads up or refreshes
-    ageCalculator();
-}
-function ageCalculator(){
-    //Calculates my age, so it is always current
-    const birthday = "2004-9-04"
-    const birthDate = new Date(birthday);
-    const currentDate = new Date();
-
-    let age = currentDate.getFullYear() - birthDate.getFullYear();
-    const monthDiff = currentDate.getMonth() - birthDate.getMonth();
-    if (monthDiff < 0 || (monthDiff === 0 && currentDate.getDate() < birthDate.getDate())) {
-        age--;
-    }
-    // document.getElementById("age").innerHTML = age;
-    const ageEl = document.getElementById('age');
-    if (ageEl) ageEl.textContext = age;
-    console.log(age);
-    // Age calculation part complete
-}
-function toggleMenu(){
-    const navbar = document.getElementById("navbar");
-    navbar.classList.toggle('show');
-}
